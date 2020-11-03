@@ -3,6 +3,8 @@ This project is part of a coding competition held by [IT-Talents](https://www.it
 It showcases a solution to find suitable recipes with ingredients you already have at home. 
 <br>
 <br>
+![readme_image](https://github.com/julielange/coding_competition/blob/main/readme_img.png)
+<br>
 
 **Features:**
 * Enter ingredients you like to use for cooking
