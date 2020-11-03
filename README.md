@@ -1,4 +1,4 @@
-# My First Coding Competition
+# Coding Competition
 This project is part of a coding competition held by [IT-Talents](https://www.it-talents.de).
 It showcases a solution to find suitable recipes with ingredients you already have at home. 
 <br>
