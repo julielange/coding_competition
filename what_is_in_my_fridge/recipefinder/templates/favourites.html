@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Your Favourites</title>
+{% endblock %}
+
+{% block body %}
+ <br>
+ <br>
+ <div class="jumbotron">
+    <h1 class="display-4">Your Favourites</h1>
+    <hr class="my-4">
+    {% for r in favourites %}
+        <h3>{{r.title }}</h3>
+        <br>
+        <img src={{r.image}} class="rounded mx-auto d-block" alt="recipe image">
+        <br>
+        <a class="btn btn-success btn-lg" href="/recipes/instructions/{{r.id}}" role="button">View</a>
+        <a class="btn btn-danger btn-lg" href="/favourites/delete/{{r.id}}" role="button">Delete</a>
+        <br>
+        <br>
+        <hr class="my-4">
+    {% endfor %}
+
+    
+    <p class="lead">
+      <a class="btn btn-secondary btn-lg" href="/get_recipe" role="button">Back</a>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Recipe Instructions</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<br>
+    <div class="jumbotron">
+        <h1 class="display-4">{{ recipe_name }}</h1>
+        <hr class="my-4">
+
+        <h3 class="display-6">Ingredients:</h3>
+        <br>
+        {% for ingr in ingredients %}
+            <ul>
+                <li>{{ ingr.name }}: {{ ingr.amount }} {{ingr.unit }}</li>
+            </ul>
+        {% endfor %}
+
+        <br>
+        <hr class="my-4">
+        <br>
+        <h3 class="display-6">Instructions:</h3>
+        <br>
+        {% for i in instructions %}
+            <p>{{ i.step_no }}. {{ i.step }}</p> 
+            <br>      
+        {% endfor %}
+    
+        <hr class="my-4">
+        <p class="lead">
+          <a class="btn btn-secondary btn-lg" href="/recipes" role="button">Back</a>
+        </p>
+    </div>
+</p>
+{% endblock %}

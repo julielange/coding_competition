@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Recipes</title>
+{% endblock %}
+
+{% block body %}
+ <br>
+ <br>
+ <div class="jumbotron">
+    <h1 class="display-4">Recipes</h1>
+    <hr class="my-4">
+    {% for r in recipes %}
+        <h3>{{ r.title }}</h3>
+        <br>
+        <img src={{r.image}} class="rounded mx-auto d-block" alt="recipe image">
+        <br>
+        <a class="btn btn-success btn-lg" href="/recipes/instructions/{{r.id}}" role="button">View</a>
+        <a class="btn btn-light btn-lg" href="/recipes/add_favourite/{{r.id}}" role="button">&#10084</a>
+        <br>
+        <br>
+        <hr class="my-4">
+    {% endfor %}
+
+    
+    <p class="lead">
+      <a class="btn btn-secondary btn-lg" href="/get_recipe" role="button">Back</a>
+    </p>
+</div>
+{% endblock %}

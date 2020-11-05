@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>What is in my fridge?</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<br>
+<div class="jumbotron">
+    <h1 class="display-4">Find new recipes:</h1>
+    <hr class="my-4">
+    <form action="/get_recipe" method="POST">
+      <div class="form-group">
+          <label for="Ingredients">Enter ingredients you like to use today:</label>
+          <input class="form-control" type="text" name="ingredients" id="ingredients" aria-describedby="ingredients" placeholder="e.g. apples, milk" required>
+          <br>
+          <input class="btn btn-success btn-lg" type="submit" value="Get Recipes!">
+        </div>
+    </form>
+  </div>
+{% endblock %}
